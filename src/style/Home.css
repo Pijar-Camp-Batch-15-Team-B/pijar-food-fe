@@ -33,7 +33,7 @@
 .hero-input {
     background-color: white;
     padding: 20px ;
-    width: 110%;
+    width: 100%;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -187,6 +187,9 @@ hr {
     .hero-right img {
         width: 50%;
     }
+    .hero-input input{
+        width: 50%;
+    }
 
     /* Popular Mobile */
     .popular-img {
@@ -199,6 +202,10 @@ hr {
 
     .inner-text img{
         width: 100%;
+    }
+    /* New Recipe Mobile */
+    .recipe-orange{
+        height: 400px;
     }
 }
 
