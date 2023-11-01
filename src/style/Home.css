@@ -130,7 +130,8 @@
 }
 
 .recipe-right h1{
-    font-size: 4em;
+    font-size: 3.5em;
+    font-weight: bold;
 }
 
 .recipe-right p{
@@ -200,12 +201,27 @@ hr {
         padding: 20px;
     }
 
+    .title-head p{
+        font-size: 3em;
+    }
+
     .inner-text img{
         width: 100%;
     }
     /* New Recipe Mobile */
     .recipe-orange{
         height: 400px;
+    }
+    .recipe-right {
+        margin-top: 14%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    hr {
+        width: 50%;
+        margin: auto;
+        padding: 15px;
     }
 }
 
