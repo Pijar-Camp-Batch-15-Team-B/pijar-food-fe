@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import "../style/Home.css"
@@ -73,10 +72,35 @@ function Home() {
         <p>Popular Recipe</p>
       </div>
 
-      <div className=''>
-        
+      <div className='menu-box'>
+      <div className='menu-child'>
+          <p>Chicken</p>
+          <img src='/images/chicken-kare.png'/>
+        </div>
+        <div className='menu-child'>
+          <p>Bomb Chicken</p>
+          <img src='/images/bomb-chicken.png'/>
+        </div>
+        <div className='menu-child'>
+          <p>Banana Smoothie Pop</p>
+          <img src='/images/banana-smoothie.png'/>
+        </div>
+        <div className='menu-child'>
+          <p>Coffe Lava Cake</p>
+          <img src='/images/coffee-lava.png'/>
+        </div>
+        <div className='menu-child'>
+          <p>Sugar Salmon</p>
+          <img src='/images/sugar-salmon.png'/>
+        </div>
+        <div className='menu-child'>
+          <p>Indian Salad</p>
+          <img src='/images/indian-salad.png'/>
+        </div>
       </div>
     </div>
+
+    <Footer/>
     </>
     
   )
