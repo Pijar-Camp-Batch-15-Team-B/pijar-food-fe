@@ -138,6 +138,10 @@
     font-size: 1.2em;
 }
 
+.row{
+    margin-right: 0;
+}
+
 hr {
     width: 10%;
 }
@@ -146,7 +150,7 @@ hr {
 
 .popular-recipe{
     background-color: #FFF5EC;
-    padding-top: 30rem;
+    padding-top: 25rem;
     padding-bottom: 100px;
 }
 
@@ -171,6 +175,10 @@ hr {
     font-weight: bold;
 }
 
+.menu-child img{
+    width: 100%;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 1394px){
@@ -193,6 +201,10 @@ hr {
     }
 
     /* Popular Mobile */
+    .popular-box{
+        padding-top: 100px;
+    }
+
     .popular-img {
         display: flex;
         flex-direction: column;
@@ -216,12 +228,18 @@ hr {
         margin-top: 14%;
         padding: 20px;
         text-align: center;
+        font-size: .8em;
     }
 
     hr {
         width: 50%;
         margin: auto;
         padding: 15px;
+    }
+
+    /* Popular Recipe */
+    .menu-box{
+        padding: 20px;
     }
 }
 

@@ -3,6 +3,10 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import "../style/Home.css"
 import {BsSearch} from 'react-icons/bs'
+import Aos from 'aos'
+import 'aos/dist/aos.css';
+
+Aos.init();
 
 function Home() {
   return (
@@ -10,8 +14,8 @@ function Home() {
     {/* Header Part */}
     <div className='main-box'>
     <Navbar/>
-    <nav className='nav-box'>
-        <div className='hero-left'>
+    <nav  className='nav-box'>
+        <div data-aos="fade-right" data-aos-duration="2000" className='hero-left'>
             <h1>Discover Recipe <br/> & Delicious Food</h1>
             <div className='hero-input'>
                 <BsSearch/>
