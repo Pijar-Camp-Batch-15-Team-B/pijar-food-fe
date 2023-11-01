@@ -17,7 +17,7 @@ html, body {
     justify-content: center;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(#EFC81A70 100%, white 0%) ,url(/public/images/image\ 15.png);
+    background-image: linear-gradient(#EFC81A70 100%, white 0%) ,url(/public/images/image-15.png);
 }
 
 .lb {

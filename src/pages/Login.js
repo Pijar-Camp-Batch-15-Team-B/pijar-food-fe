@@ -9,7 +9,7 @@ export default function Login() {
         <div className="left">
             <div className="left2">
                 <div className="lb">
-                    <img src="/images/barbecue 1.png" alt="logos" className="limg"/>
+                    <img src="/images/barbecue-1.png" alt="logos" className="limg"/>
                     <p className="lt">Mama Recipe.</p>
                 </div>
             </div>
