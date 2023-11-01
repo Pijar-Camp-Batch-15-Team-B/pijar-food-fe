@@ -20,7 +20,7 @@ function Footer() {
           <a href="#">Get In Touch</a>
         </div>
         <div class="d-flex justify-content-center">
-          <p class="copyright">©️ Arkademy</p>
+          <p class="copyright">©️ Pijarcamp</p>
         </div>
       </div>
     </footer>
