@@ -43,6 +43,14 @@
 
 .hero-right img {
     width: 85%;
+    position: relative;
+    animation-name: rotate;
+    animation-duration: 2s;
+}
+
+@keyframes rotate{
+    0% {right: -100%; opacity: 0px; transform: rotate(90deg);}
+    100% {right: 0%; opacity: 100%; transform: rotate(0deg);}
 }
 
 /* Popular Css */
