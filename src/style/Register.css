@@ -1,5 +1,6 @@
 .main-regis{
     display: flex;
+    font-family: 'Poppins';
 }
 
 .left-regis {
@@ -23,6 +24,11 @@
     text-align: center;
 }
 
+.regis-title h2{
+    color: #EFC81A;
+    font-weight: bold;
+}
+
 .regis-input {
     display: flex;
     flex-direction: column;
@@ -34,4 +40,11 @@
     flex-direction: column;
     width: 50%;
     gap: 20px;
+}
+
+@media screen and (max-width: 951px) {
+    .main-regis{
+        display: flex;
+        flex-direction: column;
+    }
 }
