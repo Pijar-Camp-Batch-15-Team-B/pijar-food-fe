@@ -1,0 +1,98 @@
+.addRecipeBody {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.addPict {
+  height: 250px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  text-align: center;
+  border: none;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.addTitle {
+  height: 70px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.addIngredient {
+  height: 150px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  border: none;
+  padding-bottom: 80px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.addVideo {
+  height: 70px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.addVideo::selection {
+  background-color: #efc81a;
+}
+
+.addRecipeBody button {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  background-color: #efc81a;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+.addRecipeBody button:hover {
+  scale: 1.1;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+    .addPict {
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .addTitle {
+        height: 50px;
+        margin-bottom: 20px;
+    }
+    
+    .addIngredient {
+        height: 100px;
+        margin-bottom: 20px;
+        padding-bottom: 40px;
+    }
+    
+    .addVideo {
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .addRecipeBody button {
+        height: 35px;
+        width: 110px;
+        margin-bottom: 30px;
+    }
+}
