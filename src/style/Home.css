@@ -10,7 +10,6 @@
 
 .main-box{
     background-image: url(/public/images/background-hero.png);
-    height: 100vh;
 }
 
 .nav-box {
@@ -84,6 +83,7 @@
 
 .inner-text{
     position: relative;
+ 
 }
 
 .inner-text p{
@@ -94,6 +94,7 @@
     font-weight: bold;
     color: white;
 }
+
 
 .inner-text img{
     width: 100%;
@@ -168,5 +169,24 @@ hr {
     left: 5%;
     font-size: 2em;
     font-weight: bold;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 1394px){
+    /* Header Mobile */
+    .nav-box{
+        display: flex;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    .hero-left h1 {
+        font-size: 3em;
+    }
+
+    .hero-right img {
+        width: 50%;
+    }
 }
 
