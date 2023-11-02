@@ -11,19 +11,30 @@ function Home() {
 
   const handleGetResponse = async () => {
     try {
-      const popularRecipe = await axios.get("/api/recipe.json");
-
+       // Popular Recipe
+       const popularRecipe = await axios.get(
+        "https://4b8a-103-144-170-9.ngrok-free.app/latestrecipe",
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
+      );
+  
       if (popularRecipe.status === 200) {
         setRecipe(popularRecipe.data);
+        console.log(setRecipe)
       }
+  
+      // Latest
     } catch (error) {
       console.log(error);
     }
   };
-
+  
   React.useEffect(() => {
     handleGetResponse();
-  });
+  }, []);
   return (
     <>
       {/* Header Part */}
@@ -84,8 +95,7 @@ function Home() {
             </h1>
             <hr />
             <p>
-              Quick + Easy Chicken Bone Broth Ramen- <br /> Healty chicken ramen
-              in a hurry? That's right!
+            Would you like to learn how to make it? <br/> You can access a more detailed version of this recipe, <br/> which includes step-by-step instructions.
             </p>
             <button type="button" className="btn btn-warning text-white">
               Learn More
@@ -102,7 +112,7 @@ function Home() {
 
         
         <div className="menu-box">
-          {recipe.slice(0,6).map((item) => (
+          {recipe.slice(0, 5).map((item) => (
             <Popular
             title={item.title}
             image={item.image}
