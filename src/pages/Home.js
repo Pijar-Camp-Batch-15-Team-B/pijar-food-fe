@@ -4,11 +4,7 @@ import Footer from "../components/Footer";
 import Popular from "../components/Popular";
 import "../style/Home.css";
 import { BsSearch } from "react-icons/bs";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import axios from "axios";
-
-Aos.init();
 
 function Home() {
   const [recipe, setRecipe] = useState([]);
