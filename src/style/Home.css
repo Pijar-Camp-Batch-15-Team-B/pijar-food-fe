@@ -33,7 +33,7 @@
 .hero-input {
     background-color: white;
     padding: 20px ;
-    width: 110%;
+    width: 100%;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -104,7 +104,6 @@
 
 .recipe-box{
     background-color: #FFF5EC;
-    height: 90vh;
     padding-top: 15rem;
 }
 
@@ -131,11 +130,16 @@
 }
 
 .recipe-right h1{
-    font-size: 4em;
+    font-size: 3.5em;
+    font-weight: bold;
 }
 
 .recipe-right p{
     font-size: 1.2em;
+}
+
+.row{
+    margin-right: 0;
 }
 
 hr {
@@ -146,7 +150,7 @@ hr {
 
 .popular-recipe{
     background-color: #FFF5EC;
-    padding-top: 30rem;
+    padding-top: 25rem;
     padding-bottom: 100px;
 }
 
@@ -171,6 +175,10 @@ hr {
     font-weight: bold;
 }
 
+.menu-child img{
+    width: 100%;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 1394px){
@@ -187,6 +195,51 @@ hr {
 
     .hero-right img {
         width: 50%;
+    }
+    .hero-input input{
+        width: 50%;
+    }
+
+    /* Popular Mobile */
+    .popular-box{
+        padding-top: 100px;
+    }
+
+    .popular-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .title-head p{
+        font-size: 3em;
+    }
+
+    .inner-text img{
+        width: 100%;
+    }
+    /* New Recipe Mobile */
+    .recipe-orange{
+        height: 400px;
+    }
+    .recipe-right {
+        margin-top: 14%;
+        padding: 20px;
+        text-align: center;
+        font-size: .8em;
+    }
+
+    hr {
+        width: 50%;
+        margin: auto;
+        padding: 15px;
+    }
+
+    /* Popular Recipe */
+    .menu-box{
+        padding: 20px;
     }
 }
 

@@ -1,9 +1,9 @@
-.main-login{
+.main-regis{
     display: flex;
     font-family: 'Poppins';
 }
 
-.left-login {
+.left-regis {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -12,7 +12,7 @@
     background-image: linear-gradient(#EFC81A70 100%, white 0%) ,url(/public/images/image-15.png);
 }
 
-.right-login{
+.right-regis{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -20,22 +20,22 @@
     align-items: center;
 }
 
-.login-title{
+.regis-title{
     text-align: center;
 }
 
-.login-title h2{
+.regis-title h2{
     color: #EFC81A;
     font-weight: bold;
 }
 
-.login-input {
+.regis-input {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.right-login-child{
+.right-regis-child{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -43,7 +43,7 @@
 }
 
 @media screen and (max-width: 951px) {
-    .main-login{
+    .main-regis{
         display: flex;
         flex-direction: column;
     }

@@ -4,34 +4,54 @@ import '../style/Login.css'
 
 export default function Login() {
   return (
-    <section id='Login'>
-      <div className="container">
-        <div className="left">
-            <div className="left2">
-                <div className="lb">
-                    <img src="/images/barbecue 1.png" alt="logos" className="limg"/>
-                    <p className="lt">Mama Recipe.</p>
-                </div>
-            </div>
+    <section className="main-login">
+      <div className="left-login">
+        <img src="/images/barbecue-1.png" />
+      </div>
+      <div className="right-login">
+        <div className="right-login-child">
+          <div className="login-title">
+            <h2>Welcome</h2>
+            <p>Login to your exiting account.</p>
+          </div>
+          <div className="regis-input">
+            <span>
+              <label for="exampleFormControlInput1" className="form-label">
+                Email address
+              </label>
+              <input
+                type="email"
+                className="form-control form-control-lg"
+                id="exampleFormControlInput1"
+                placeholder="Enter Email Adress"
+              />
+            </span>
+            <span>
+              <label for="exampleFormControlInput1" className="form-label">
+                Password
+              </label>
+              <input
+                type="email"
+                className="form-control form-control-lg"
+                id="exampleFormControlInput1"
+                placeholder="Password"
+              />
+            </span>
+            <span>
+              <input
+                className="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck1"
+              />
+              <label className="form-check-label" for="defaultCheck1">
+                Default checkbox
+              </label>
+            </span>
+          </div>
+          <button type="button" className="btn btn-warning">Log In</button>
         </div>
-        <div className="right">
-            <div className="rb">
-                <h1 className="rb1a">WELCOME</h1>
-                <h3 className="rb1">Log in into your exiting account</h3>
-                <h3>E-mail</h3>
-                <input type="email" placeholder="E-mail" className="rb-i1"/>
-                <h3>Password</h3>
-                <input type="password" placeholder="Password" className="rb-i"/>
-                <div className="rb2">
-                    <input type="checkbox" className="rb2a"></input>
-                    <div className="rb2b">I agree to terms & conditions</div>
-                </div>
-                <button className="rb-btn">Log in</button>
-                <p className="rb3">Forgot Password ?</p>    
-                <p className="rb4">Don’t have an account? <span className="rb4a">Sign Up</span></p>           
-            </div>
-        </div>
-    </div>
+      </div>
     </section>
   )
 }
