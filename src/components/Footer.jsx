@@ -13,7 +13,7 @@ function Footer() {
         </p>
       </div>
       <div>
-        <div className="d-flex justify-content-center gap-5 mb-3 footer-link">
+        <div className="d-flex justify-content-center gap-4 mb-3 footer-link">
           <a href="#">Product</a>
           <a href="#">Company</a>
           <a href="#">Learn More</a>

@@ -23,5 +23,13 @@
     font-weight: 400;
     line-height: normal;
   }
-  
+
+  .btn-login{
+    border: 1px solid black;
+  }
+
+  .btn-warning {
+    background-color: #FFC107;
+  }
+
   

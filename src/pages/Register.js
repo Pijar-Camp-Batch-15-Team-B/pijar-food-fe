@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/Register.css";
+import { Link } from "react-router-dom";
 
 function Register() {
   return (
@@ -69,7 +70,7 @@ function Register() {
                 placeholder="New Password"
               />
             </span>
-            <span>
+            <span className="d-flex gap-3">
               <input
                 className="form-check-input"
                 type="checkbox"
@@ -77,11 +78,14 @@ function Register() {
                 id="defaultCheck1"
               />
               <label className="form-check-label" for="defaultCheck1">
-                Default checkbox
+                I agree to terms & conditions
               </label>
             </span>
           </div>
           <button type="button" className="btn btn-warning">Warning</button>
+          <p className="text-center">Already have account? <Link to="/login">
+          <span className="text-warning">Log in Here</span>
+          </Link></p>
         </div>
       </div>
     </section>

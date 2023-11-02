@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../style/Login.css'
+import { Link } from 'react-router-dom'
 
 export default function Login() {
   return (
@@ -37,19 +38,22 @@ export default function Login() {
                 placeholder="Password"
               />
             </span>
-            <span>
+            <span className='d-flex gap-3'>
               <input
                 className="form-check-input"
                 type="checkbox"
                 value=""
                 id="defaultCheck1"
               />
-              <label className="form-check-label" for="defaultCheck1">
-                Default checkbox
+              <label className="form-check-label " for="defaultCheck1">
+                I agree to terms & conditions
               </label>
             </span>
           </div>
           <button type="button" className="btn btn-warning">Log In</button>
+          <p className='text-center'>Don't have an account ? <Link to="/register">
+          <span className='text-warning'>Register</span>
+          </Link></p>
         </div>
       </div>
     </section>
