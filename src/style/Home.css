@@ -245,5 +245,14 @@ hr {
     .menu-box{
         padding: 20px;
     }
+
+}
+
+@media screen and (max-width: 703px) {
+    /* Poplar Recipe */
+    
+    .menu-child img {
+        width: 100%;
+    }
 }
 
