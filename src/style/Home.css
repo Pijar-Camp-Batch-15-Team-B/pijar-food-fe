@@ -53,6 +53,8 @@
     animation-duration: 2s;
 }
 
+
+
 @keyframes rotate{
     0% {right: -100%; opacity: 0px; transform: rotate(90deg);}
     100% {right: 0%; opacity: 100%; transform: rotate(0deg);}
@@ -91,6 +93,8 @@
     padding-top: 60px;
     padding-bottom: 100px;
 }
+
+
 
 .inner-text{
     position: relative;
