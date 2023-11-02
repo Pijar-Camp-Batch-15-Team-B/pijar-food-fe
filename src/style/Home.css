@@ -19,6 +19,12 @@
     padding: 15px;
 }
 
+.hero-left {
+    position: relative;
+    animation-name: slide;
+    animation-duration: 1.5s;
+}
+
 .hero-left h1 {
     font-size: 4em;
     font-family: 'Poppins';
@@ -50,6 +56,11 @@
 @keyframes rotate{
     0% {right: -100%; opacity: 0px; transform: rotate(90deg);}
     100% {right: 0%; opacity: 100%; transform: rotate(0deg);}
+}
+
+@keyframes slide{
+    0% {left: -50%; opacity: 0px;}
+    100% {left: 0%; opacity: 100%;}
 }
 
 /* Popular Css */

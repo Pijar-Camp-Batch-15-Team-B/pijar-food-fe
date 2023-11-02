@@ -31,8 +31,6 @@ function Home() {
         <Navbar />
         <nav className="nav-box">
           <div
-            data-aos="fade-right"
-            data-aos-duration="2000"
             className="hero-left"
           >
             <h1>
