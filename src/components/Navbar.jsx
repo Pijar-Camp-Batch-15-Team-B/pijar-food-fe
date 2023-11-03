@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <>
+    <div className='header-container'>
+        
      <header className="container">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
@@ -58,6 +60,7 @@ function Navbar() {
                     </div>
                 </nav>
             </header>
+    </div>
     </>
   )
 }

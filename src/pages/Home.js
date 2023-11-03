@@ -5,25 +5,50 @@ import Popular from "../components/Popular";
 import "../style/Home.css";
 import { BsSearch } from "react-icons/bs";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Home() {
-  const [recipe, setRecipe] = useState([]);
+  const [popularRec, setPopularRecipe] = useState([]);
+  const [newRec, setNewRecipe] = useState([]);
 
   const handleGetResponse = async () => {
     try {
-      const popularRecipe = await axios.get("/api/recipe.json");
-
+       // Popular Recipe
+       const popularRecipe = await axios.get(
+        "https://92a3-2001-448a-3032-143f-30cc-1b5-6c36-ac45.ngrok-free.app/latestRecipe",
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
+      );
+  
       if (popularRecipe.status === 200) {
-        setRecipe(popularRecipe.data);
+        setPopularRecipe(popularRecipe.data.data);
+        console.log('data', popularRecipe.data.data)
+      }
+  
+      // New Recipe
+      const newRecipe = await axios.get (
+        "https://92a3-2001-448a-3032-143f-30cc-1b5-6c36-ac45.ngrok-free.app/newRecipe",
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
+      );
+
+      if (newRecipe.status === 200) {
+        setNewRecipe(newRecipe.data.data);
       }
     } catch (error) {
       console.log(error);
     }
   };
-
+  
   React.useEffect(() => {
     handleGetResponse();
-  });
+  }, []);
   return (
     <>
       {/* Header Part */}
@@ -71,27 +96,29 @@ function Home() {
           <span className="orange-vertical"></span>
           <p>New Recipe</p>
         </div>
-        <div className="recipe-img row align-items-center">
+        {newRec.map((item) => (
+          <div className="recipe-img row align-items-center">
           <div className="recipe-left col-md-6">
             <div className="recipe-left-img">
-              <img src="/images/onionburger.png" />
+              <img src={item.image} />
             </div>
             <div className="recipe-orange"></div>
           </div>
           <div className="recipe-right col-md-6">
             <h1>
-              Healthy Bone Broth <br /> Ramen (Quick&Easy)
+              {item.title}
             </h1>
             <hr />
             <p>
-              Quick + Easy Chicken Bone Broth Ramen- <br /> Healty chicken ramen
-              in a hurry? That's right!
+            Would you like to learn how to make it? <br/> You can access a more detailed version of this recipe, <br/> which includes step-by-step instructions.
             </p>
             <button type="button" className="btn btn-warning text-white">
               Learn More
             </button>
           </div>
         </div>
+        ))}
+        
       </section>
       {/* Popular Recipe */}
       <div className="popular-recipe">
@@ -102,11 +129,13 @@ function Home() {
 
         
         <div className="menu-box">
-          {recipe.slice(0,6).map((item) => (
+          {popularRec.slice(0, 6).map((item) => (
+            <Link to={`/detail/${item.id}`}>
             <Popular
             title={item.title}
             image={item.image}
-            />
+            />            
+            </Link>
           ))}
         </div>
       </div>
