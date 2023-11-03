@@ -40,6 +40,11 @@
 
 #detailInputComment {
     flex-direction: column;
+    padding-top: 100px;
+}
+
+.body-comment{
+    background-color: #FFF5EC;
 }
 
 #detailInputComment input {

@@ -1,6 +1,9 @@
 /* Font */
 /* font-family: "Poppins", sans-serif; */
 
+.header-container{
+  background-color:#FFF5EC;
+}
 
 .left-navbar a {
     text-decoration: none;

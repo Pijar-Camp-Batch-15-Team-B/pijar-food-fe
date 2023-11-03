@@ -5,6 +5,7 @@ import Popular from "../components/Popular";
 import "../style/Home.css";
 import { BsSearch } from "react-icons/bs";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [popularRec, setPopularRecipe] = useState([]);
@@ -39,7 +40,6 @@ function Home() {
 
       if (newRecipe.status === 200) {
         setNewRecipe(newRecipe.data.data);
-        console.log("data", newRecipe.data.data)
       }
     } catch (error) {
       console.log(error);
@@ -130,10 +130,12 @@ function Home() {
         
         <div className="menu-box">
           {popularRec.slice(0, 6).map((item) => (
+            <Link to={`/detail/${item.id}`}>
             <Popular
             title={item.title}
             image={item.image}
-            />
+            />            
+            </Link>
           ))}
         </div>
       </div>
