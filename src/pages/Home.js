@@ -7,13 +7,14 @@ import { BsSearch } from "react-icons/bs";
 import axios from "axios";
 
 function Home() {
-  const [recipe, setRecipe] = useState([]);
+  const [popularRec, setPopularRecipe] = useState([]);
+  const [newRec, setNewRecipe] = useState([]);
 
   const handleGetResponse = async () => {
     try {
        // Popular Recipe
        const popularRecipe = await axios.get(
-        "https://4b8a-103-144-170-9.ngrok-free.app/latestrecipe",
+        "https://0a30-2001-448a-3032-f0fa-414a-9f24-667e-fc4.ngrok-free.app/latestRecipe",
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
@@ -22,11 +23,24 @@ function Home() {
       );
   
       if (popularRecipe.status === 200) {
-        setRecipe(popularRecipe.data);
-        console.log(setRecipe)
+        setPopularRecipe(popularRecipe.data.data);
+        console.log('data', popularRecipe.data.data)
       }
   
-      // Latest
+      // New Recipe
+      const newRecipe = await axios.get (
+        "https://0a30-2001-448a-3032-f0fa-414a-9f24-667e-fc4.ngrok-free.app/newRecipe",
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
+      );
+
+      if (newRecipe.status === 200) {
+        setNewRecipe(newRecipe.data.data);
+        console.log("data", newRecipe.data.data)
+      }
     } catch (error) {
       console.log(error);
     }
@@ -82,16 +96,17 @@ function Home() {
           <span className="orange-vertical"></span>
           <p>New Recipe</p>
         </div>
-        <div className="recipe-img row align-items-center">
+        {newRec.map((item) => (
+          <div className="recipe-img row align-items-center">
           <div className="recipe-left col-md-6">
             <div className="recipe-left-img">
-              <img src="/images/onionburger.png" />
+              <img src={item.image} />
             </div>
             <div className="recipe-orange"></div>
           </div>
           <div className="recipe-right col-md-6">
             <h1>
-              Healthy Bone Broth <br /> Ramen (Quick&Easy)
+              {item.title}
             </h1>
             <hr />
             <p>
@@ -102,6 +117,8 @@ function Home() {
             </button>
           </div>
         </div>
+        ))}
+        
       </section>
       {/* Popular Recipe */}
       <div className="popular-recipe">
@@ -112,7 +129,7 @@ function Home() {
 
         
         <div className="menu-box">
-          {recipe.slice(0, 5).map((item) => (
+          {popularRec.slice(0, 6).map((item) => (
             <Popular
             title={item.title}
             image={item.image}
