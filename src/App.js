@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import AddRecipe from "./pages/AddRecipe";
+import Profile from "./pages/Profile";
 
 const router = createBrowserRouter ([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter ([
   {
     path: "/add-recipe",
     element: <AddRecipe/>
+  },
+  {
+    path: "/profile",
+    element: <Profile/>
   }
 ])
 

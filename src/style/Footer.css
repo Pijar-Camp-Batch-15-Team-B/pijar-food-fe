@@ -1,6 +1,11 @@
 footer {
     background: #efc81a;
   }
+
+  .footerTitle {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
   
   footer div h1 {
     color: #2e266f;
@@ -46,3 +51,19 @@ footer {
     text-transform: capitalize;
   }
   
+  @media (min-width: 320px) and (max-width: 767px){
+   .footerTitle {
+      font-size: 40px;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .footerDesk {
+      font-size: 14px;
+    }
+
+    .footer-link a {
+      font-size: 13px;
+      margin-top: -20px;
+    }
+  }
