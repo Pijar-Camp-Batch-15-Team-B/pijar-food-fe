@@ -13,8 +13,8 @@ function Register() {
   const [isSuccess, setIsSuccess] = useState (false);
   const [errMsg, setErrMsg] = useState(null);
 
-  useEffect(() => {
-    if(localStorage.getItem("token")) {
+  React.useEffect(() => {
+    if(localStorage.getItem("token") && localStorage.getItem("profile")) {
       navigate("/");
     }
   }, []);
@@ -23,21 +23,21 @@ function Register() {
     setIsLoading(true);
     setErrMsg(null)
 
-    axios.post("https://92a3-2001-448a-3032-143f-30cc-1b5-6c36-ac45.ngrok-free.app/users/register", {
+    axios.post("https://eb14-2001-448a-3032-143f-689b-53c3-8d16-e14b.ngrok-free.app/users/register", {
       username: username,
       email: email,
       phone_number: phoneNumber,
       password: password
     })
-    .then((response) => {
-      console.log("datadata", response.data.data)
+    .then(() => {
       setIsSuccess(true);
     })
     .catch((error) => {
-      const errUsername = error?.response?.data?.messages?.username?.message;
-      const errEmail = error?.response?.data?.messages?.email?.message;
-      const errPhoneNumber = error?.response?.data?.messages?.phoneNumber?.message;
-      const errPassword = error?.response?.data?.messages?.password?.message;
+      console.log("errrr", error)
+      const errUsername = error?.response?.data?.message?.username?.message;
+      const errEmail = error?.response?.data?.message?.email?.message;
+      const errPhoneNumber = error?.response?.data?.message?.phone_number?.message;
+      const errPassword = error?.response?.data?.message?.password?.message;
       setIsSuccess(false);
       setErrMsg(
         errUsername ??
@@ -46,8 +46,6 @@ function Register() {
             errPassword ??
             "Something wrong in our app"
       );
-
-      console.log("errr", errUsername)
     })
     .finally(() => {
       setIsLoading(false)

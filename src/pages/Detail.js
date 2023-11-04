@@ -18,7 +18,7 @@ function Detail() {
     try {
       // Recipe Detail
       const requestDetail = await axios.get(
-        `https://92a3-2001-448a-3032-143f-30cc-1b5-6c36-ac45.ngrok-free.app/recipe/${id}`,
+        `https://eb14-2001-448a-3032-143f-689b-53c3-8d16-e14b.ngrok-free.app/recipe/${id}`,
         {
           headers: {
             "ngrok-skip-browser-warning": "true",

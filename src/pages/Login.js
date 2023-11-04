@@ -12,7 +12,7 @@ export default function Login() {
   const [errMsg, setErrMsg] = useState(null);
 
   useEffect(() => {
-    if (localStorage.getItem("token")) {
+    if (localStorage.getItem("token") && localStorage.getItem("profile")) {
       navigate("/");
     }
   }, []);
@@ -23,18 +23,15 @@ export default function Login() {
 
     axios
       .post(
-        "https://92a3-2001-448a-3032-143f-30cc-1b5-6c36-ac45.ngrok-free.app/users/login",
-        {
+        "https://eb14-2001-448a-3032-143f-689b-53c3-8d16-e14b.ngrok-free.app/users/login", {
           email: email,
           password: password,
         }
       )
       .then((response) => {
-        const token = response?.data.token;
-        const profile = response?.data.result;
+        const token = response?.data?.accessToken;
 
         localStorage.setItem("token", token);
-        localStorage.setItem("profile", JSON.stringify(profile));
         setIsSuccess(true);
 
         setTimeout(() => {
@@ -42,8 +39,8 @@ export default function Login() {
         }, 2000);
       })
       .catch((error) => {
-        const errEmail = error?.response?.data?.messages?.email?.message;
-        const errPassword = error?.response?.data?.messages?.password?.message;
+        const errEmail = error?.message;
+        const errPassword = error?.message;
         setIsSuccess(false);
         setErrMsg(
           errEmail ??
@@ -51,6 +48,7 @@ export default function Login() {
             error?.response?.data?.messages ??
             "Something wrong in our app"
         );
+        console.log("errrr", error)
       })
       .finally(() => {
         setIsLoading(false);
