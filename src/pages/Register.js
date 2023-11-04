@@ -121,6 +121,7 @@ function Register() {
                 New Password
               </label>
               <input
+                type="password"
                 className="form-control form-control-lg"
                 id="exampleFormControlInput1"
                 placeholder="New Password"

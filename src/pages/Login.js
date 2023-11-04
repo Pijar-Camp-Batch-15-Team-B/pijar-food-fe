@@ -30,17 +30,21 @@ export default function Login() {
       )
       .then((response) => {
         const token = response?.data?.accessToken;
+        const profile = response?.data?.data
+        console.log(response.data?.data)
 
         localStorage.setItem("token", token);
+        localStorage.setItem("profile", JSON.stringify(profile))
+
         setIsSuccess(true);
 
         setTimeout(() => {
           window.location.reload();
-        }, 2000);
+        }, );
       })
       .catch((error) => {
-        const errEmail = error?.message;
-        const errPassword = error?.message;
+        const errEmail = error?.response?.data?.message?.email?.message;
+        const errPassword = error?.response?.data?.message?.password?.message;
         setIsSuccess(false);
         setErrMsg(
           errEmail ??
@@ -48,7 +52,6 @@ export default function Login() {
             error?.response?.data?.messages ??
             "Something wrong in our app"
         );
-        console.log("errrr", error)
       })
       .finally(() => {
         setIsLoading(false);

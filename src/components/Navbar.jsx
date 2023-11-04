@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
     const [profile, setProfile] = React.useState(
-        JSON.parse(localStorage.getItem("accessToken"))
+        JSON.parse(localStorage.getItem("profile"))
     );
 
     const handleLogout = () => {
-        localStorage.removeItem("accessToken");
+        localStorage.removeItem("profile");
         window.location.reload();
     };
     return (
@@ -50,9 +50,9 @@ function Navbar() {
                                     </li>
                                 </ul>
                                 {profile ? (
-                                    <div>
+                                    <div className="logout">
                                         <button
-                                            className="btn btn-primary"
+                                            className="btn btn-warning"
                                             style={{ marginRight: "10px" }}
                                             onClick={handleLogout}
                                         >
