@@ -19,7 +19,7 @@ export default function AddRecipe() {
 
     axios
       .post(
-        "https://8a8a-2001-448a-3032-143f-841b-7b4f-def6-5128.ngrok-free.app/recipe",
+        "https://98c4-103-144-170-9.ngrok-free.app/recipe",
         {
           title: title,
           ingridients: ingridients,
