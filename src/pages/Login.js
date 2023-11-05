@@ -23,24 +23,25 @@ export default function Login() {
 
     axios
       .post(
-        "https://eb14-2001-448a-3032-143f-689b-53c3-8d16-e14b.ngrok-free.app/users/login", {
+        "https://98c4-103-144-170-9.ngrok-free.app/users/login",
+        {
           email: email,
           password: password,
         }
       )
       .then((response) => {
         const token = response?.data?.accessToken;
-        const profile = response?.data?.data
-        console.log(response.data?.data)
+        const profile = response?.data?.data;
+        console.log(response.data?.data);
 
         localStorage.setItem("token", token);
-        localStorage.setItem("profile", JSON.stringify(profile))
+        localStorage.setItem("profile", JSON.stringify(profile));
 
         setIsSuccess(true);
 
         setTimeout(() => {
           window.location.reload();
-        }, );
+        });
       })
       .catch((error) => {
         const errEmail = error?.response?.data?.message?.email?.message;
@@ -61,7 +62,9 @@ export default function Login() {
   return (
     <section className="main-login">
       <div className="left-login">
-        <img src="/images/barbecue-1.png" />
+        <Link to="/">
+          <img src="/images/barbecue-1.png" />
+        </Link>
       </div>
       <div className="right-login">
         <div className="right-login-child">

@@ -62,6 +62,7 @@ function Navbar() {
                                             src={profile?.photo_profile}
                                             width="50px"
                                             height="50px"
+                                            alt="profile"
                                             style={{ background: "#e1e1e1", borderRadius: "50%" }}
                                         />
                                     </div>

@@ -10,68 +10,73 @@ function Register() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState (false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [errMsg, setErrMsg] = useState(null);
 
   React.useEffect(() => {
-    if(localStorage.getItem("token") && localStorage.getItem("profile")) {
+    if (localStorage.getItem("token") && localStorage.getItem("profile")) {
       navigate("/");
     }
   }, []);
 
   const handleRegister = () => {
     setIsLoading(true);
-    setErrMsg(null)
+    setErrMsg(null);
 
-    axios.post("https://eb14-2001-448a-3032-143f-689b-53c3-8d16-e14b.ngrok-free.app/users/register", {
-      username: username,
-      email: email,
-      phone_number: phoneNumber,
-      password: password
-    })
-    .then(() => {
-      setIsSuccess(true);
-    })
-    .catch((error) => {
-      console.log("errrr", error)
-      const errUsername = error?.response?.data?.message?.username?.message;
-      const errEmail = error?.response?.data?.message?.email?.message;
-      const errPhoneNumber = error?.response?.data?.message?.phone_number?.message;
-      const errPassword = error?.response?.data?.message?.password?.message;
-      setIsSuccess(false);
-      setErrMsg(
-        errUsername ??
+    axios
+      .post(
+        "https://98c4-103-144-170-9.ngrok-free.app/users/register",
+        {
+          username: username,
+          email: email,
+          phone_number: phoneNumber,
+          password: password,
+        }
+      )
+      .then(() => {
+        setIsSuccess(true);
+      })
+      .catch((error) => {
+        console.log("errrr", error);
+        const errUsername = error?.response?.data?.message?.username?.message;
+        const errEmail = error?.response?.data?.message?.email?.message;
+        const errPhoneNumber =
+          error?.response?.data?.message?.phone_number?.message;
+        const errPassword = error?.response?.data?.message?.password?.message;
+        setIsSuccess(false);
+        setErrMsg(
+          errUsername ??
             errEmail ??
             errPhoneNumber ??
             errPassword ??
             "Something wrong in our app"
-      );
-    })
-    .finally(() => {
-      setIsLoading(false)
-    })
-  }
-
-
+        );
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
 
   return (
     <section className="main-regis">
       <div className="left-regis">
-        <img src="/images/barbecue-1.png" />
+        <Link to="/">
+          <img src="/images/barbecue-1.png" />
+        </Link>
       </div>
       <div className="right-regis">
         <div className="right-regis-child">
-        {isSuccess ? (
-              <div className="alert alert-success" role="alert">
-                <p>Register Account Sucess. Please Check Your Email</p>
-              </div>
-            ) : null}
+          {isSuccess ? (
+            <div className="alert alert-success" role="alert">
+              <p>Register Account Sucess. Please Check Your Email</p>
+            </div>
+          ) : null}
 
-            {errMsg ? (
-              <div className="alert alert-danger" role="alert">
-                {errMsg}
-              </div>
-            ) : null}
+          {errMsg ? (
+            <div className="alert alert-danger" role="alert">
+              {errMsg}
+            </div>
+          ) : null}
           <div className="regis-title">
             <h2>Let's Get Started!</h2>
             <p>Create new account to access all features.</p>
@@ -99,7 +104,7 @@ function Register() {
                 id="exampleFormControlInput1"
                 placeholder="Enter Email Adress"
                 onChange={(event) => {
-                  setEmail(event.target.value)
+                  setEmail(event.target.value);
                 }}
               />
             </span>
@@ -112,7 +117,7 @@ function Register() {
                 id="exampleFormControlInput1"
                 placeholder="08xxxxxxxxxxx"
                 onChange={(event) => {
-                  setPhoneNumber(event.target.value)
+                  setPhoneNumber(event.target.value);
                 }}
               />
             </span>
@@ -126,7 +131,7 @@ function Register() {
                 id="exampleFormControlInput1"
                 placeholder="New Password"
                 onChange={(event) => {
-                  setPassword(event.target.value)
+                  setPassword(event.target.value);
                 }}
               />
             </span>
@@ -142,10 +147,20 @@ function Register() {
               </label>
             </span>
           </div>
-          <button onClick={handleRegister} disabled={isLoading} type="button" className="btn btn-warning">{isLoading ? "Loading..." : "Sign In"}</button>
-          <p className="text-center">Already have account? <Link to="/login">
-          <span className="text-warning">Log in Here</span>
-          </Link></p>
+          <button
+            onClick={handleRegister}
+            disabled={isLoading}
+            type="button"
+            className="btn btn-warning"
+          >
+            {isLoading ? "Loading..." : "Sign In"}
+          </button>
+          <p className="text-center">
+            Already have account?{" "}
+            <Link to="/login">
+              <span className="text-warning">Log in Here</span>
+            </Link>
+          </p>
         </div>
       </div>
     </section>
