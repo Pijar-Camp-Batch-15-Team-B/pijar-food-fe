@@ -1,131 +1,132 @@
 #bodyDetail {
-    background-color: #FFF5EC;
-    margin-bottom: -50px;
+  background-color: #fff5ec;
+  margin-bottom: -50px;
 }
 
-.gambardetail{
-    height: 400px;
-    width: 600px;
-    border-radius: 30px;
-    margin-top: 45px;
-    margin-bottom: 45px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+.gambardetail {
+  height: 400px;
+  width: 600px;
+  border-radius: 30px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 #bodyDetail .gambardetail:hover {
-    scale: 1.1;
-    transition: 1s;
+  scale: 1.1;
+  transition: 1s;
 }
 
 .gambardetail img {
-    height: 400px;
-    width: 600px;
-    object-fit: cover;
+  height: 400px;
+  width: 600px;
+  object-fit: cover;
 }
 
 .videoBtn {
-    height: 70px;
-    width: 250px;
-    border-radius: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: #EFC81A;
-    border: none;
+  height: 70px;
+  width: 250px;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #efc81a;
+  border: none;
 }
 
 .videoBtn:hover {
-    scale: 1.1;
+  scale: 1.1;
 }
 
 #detailInputComment {
-    flex-direction: column;
-    padding-top: 100px;
+  flex-direction: column;
+  padding-top: 100px;
 }
 
-.body-comment{
-    background-color: #FFF5EC;
+.body-comment {
+  background-color: #fff5ec;
 }
 
 #detailInputComment input {
-    height: 350px;
-    border-radius: 40px;
-    padding-left: 30px;
-    padding-bottom: 270px;
-    margin-bottom: 25px;
-    border: none;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  height: 350px;
+  border-radius: 40px;
+  padding-left: 30px;
+  padding-bottom: 270px;
+  margin-bottom: 25px;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 #detailInputComment .sendCommentBtn {
-    height: 50px;
-    width: 170px;
-    border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #EFC81A;
-    color: white;
-    border: none;
+  height: 50px;
+  width: 170px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #efc81a;
+  color: white;
+  border: none;
 }
 
 #detailInputComment .sendCommentBtn:hover {
-    scale: 1.1;
+  scale: 1.1;
 }
 
 #commentDisplay {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .commentComponent {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .commentProfile {
-    width: 50px;
-    margin-left: 20px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    object-position: center;
-    object-fit: cover;
+  width: 50px;
+  margin-left: 20px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-position: center;
+  object-fit: cover;
 }
 
-.commentProfile img{
-    width: 50px;
-    height: 50px;
+.commentProfile img {
+  width: 50px;
+  height: 50px;
 }
 
 .deskComment {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .deskComment h6 {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
-@media (min-width: 320px) and (max-width: 767px){
-    .gambardetail {
-        height: 200px;
-        width: 300px;
-        object-position: center;
-        margin-top: 20px;
-    } 
+@media (min-width: 320px) and (max-width: 767px) {
+  .gambardetail {
+    height: 200px;
+    width: 300px;
+    object-position: center;
+    margin-top: 20px;
+  }
 
-    .gambardetail img {
-        height: 200px;
-        width: 300px;
-        object-fit: cover;
-    }
+  .gambardetail img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+  }
 
-    .videoBtn {
-        height: 50px;
-        width: 180px;
-        margin-top: 15px;
-    }
+  .videoBtn {
+    height: 50px;
+    width: 180px;
+    margin-top: 15px;
+  }
 
-    #detailInputComment input {
-        height: 170px;
-        padding-bottom: 120px;
-
-    }
+  #detailInputComment input {
+    height: 170px;
+    padding-bottom: 120px;
+  }
 }

@@ -1,14 +1,14 @@
-import React from 'react'
-import '../style/Home.css'
+import React from "react";
+import "../style/Home.css";
 
 function Popular(props) {
-    const {title, image} = props
+  const { title, image } = props;
   return (
     <div className="menu-child">
-            <p>{title}</p>
-            <img src={image} />
+      <p>{title}</p>
+      <img src={image} />
     </div>
-  )
+  );
 }
 
-export default Popular
+export default Popular;

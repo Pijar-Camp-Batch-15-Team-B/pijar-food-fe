@@ -1,50 +1,51 @@
-.main-regis{
-    display: flex;
-    font-family: 'Poppins';
+.main-regis {
+  display: flex;
+  font-family: "Poppins";
 }
 
 .left-regis {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(#EFC81A70 100%, white 0%) ,url(/public/images/image-15.png);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(#efc81a70 100%, white 0%),
+    url(/public/images/image-15.png);
 }
 
-.right-regis{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.right-regis {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.regis-title{
-    text-align: center;
+.regis-title {
+  text-align: center;
 }
 
-.regis-title h2{
-    color: #EFC81A;
-    font-weight: bold;
+.regis-title h2 {
+  color: #efc81a;
+  font-weight: bold;
 }
 
 .regis-input {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.right-regis-child{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    gap: 20px;
+.right-regis-child {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
 }
 
 @media screen and (max-width: 951px) {
-    .main-regis{
-        display: flex;
-        flex-direction: column;
-    }
+  .main-regis {
+    display: flex;
+    flex-direction: column;
+  }
 }

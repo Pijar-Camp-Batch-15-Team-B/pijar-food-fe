@@ -22,13 +22,10 @@ export default function Login() {
     setErrMsg(null);
 
     axios
-      .post(
-        "https://98c4-103-144-170-9.ngrok-free.app/users/login",
-        {
-          email: email,
-          password: password,
-        }
-      )
+      .post("https://recipe-web-be-b.onrender.com/users/login", {
+        email: email,
+        password: password,
+      })
       .then((response) => {
         const token = response?.data?.accessToken;
         const profile = response?.data?.data;
