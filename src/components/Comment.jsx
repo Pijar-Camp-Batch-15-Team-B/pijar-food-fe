@@ -1,17 +1,21 @@
 import React from 'react'
 
-export default function Comment() {
+function Comment(props) {
+  const {message, username, photo_profile} = props
+
   return (
     <div id='commentSection'>
         <div className="d-flex commentComponent">
           <div className="commentProfile">
-            <img src="/images/profile.png" alt="profile"></img>
+            <img src={photo_profile} alt="profile"></img>
           </div>
           <div className="deskComment">
-            <h6 className="commentName">ayudia</h6>
-            <p className="textComment">ini adalah contoh comment </p>
+            <h6 className="commentName">{username}</h6>
+            <p className="textComment">{message}</p>
           </div>
         </div>
     </div>
   )
 }
+
+export default Comment

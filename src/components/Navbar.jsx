@@ -39,12 +39,12 @@ function Navbar() {
                                         </Link>
                                     </li>
                                     <li className="nav-item nav-text">
-                                        <Link className="nav-link" to="/">
+                                        <Link className="nav-link" to="/add-recipe">
                                             <p>Add Recipe</p>
                                         </Link>
                                     </li>
                                     <li className="nav-item nav-text">
-                                        <Link className="nav-link" to="/">
+                                        <Link className="nav-link" to="/profile">
                                             <p>Profile</p>
                                         </Link>
                                     </li>
@@ -62,6 +62,7 @@ function Navbar() {
                                             src={profile?.photo_profile}
                                             width="50px"
                                             height="50px"
+                                            alt="profile"
                                             style={{ background: "#e1e1e1", borderRadius: "50%" }}
                                         />
                                     </div>
