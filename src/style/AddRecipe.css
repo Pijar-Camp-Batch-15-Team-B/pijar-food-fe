@@ -1,3 +1,7 @@
+#addRecipe{
+  background-color: #FFF5EC;
+}
+
 .addRecipeBody {
   display: flex;
   flex-direction: column;
