@@ -24,15 +24,12 @@ function Register() {
     setErrMsg(null);
 
     axios
-      .post(
-        "https://98c4-103-144-170-9.ngrok-free.app/users/register",
-        {
-          username: username,
-          email: email,
-          phone_number: phoneNumber,
-          password: password,
-        }
-      )
+      .post("https://recipe-web-be-b.onrender.com/users/register", {
+        username: username,
+        email: email,
+        phone_number: phoneNumber,
+        password: password,
+      })
       .then(() => {
         setIsSuccess(true);
       })

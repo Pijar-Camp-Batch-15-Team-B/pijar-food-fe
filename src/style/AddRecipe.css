@@ -1,5 +1,5 @@
-#addRecipe{
-  background-color: #FFF5EC;
+#addRecipe {
+  background-color: #fff5ec;
 }
 
 .addRecipeBody {
@@ -72,31 +72,31 @@
   scale: 1.1;
 }
 
-@media (min-width: 320px) and (max-width: 767px){
-    .addPict {
-        height: 100px;
-        margin-bottom: 20px;
-    }
+@media (min-width: 320px) and (max-width: 767px) {
+  .addPict {
+    height: 100px;
+    margin-bottom: 20px;
+  }
 
-    .addTitle {
-        height: 50px;
-        margin-bottom: 20px;
-    }
-    
-    .addIngredient {
-        height: 100px;
-        margin-bottom: 20px;
-        padding-bottom: 40px;
-    }
-    
-    .addVideo {
-        height: 50px;
-        margin-bottom: 20px;
-    }
+  .addTitle {
+    height: 50px;
+    margin-bottom: 20px;
+  }
 
-    .addRecipeBody button {
-        height: 35px;
-        width: 110px;
-        margin-bottom: 30px;
-    }
+  .addIngredient {
+    height: 100px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+  }
+
+  .addVideo {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .addRecipeBody button {
+    height: 35px;
+    width: 110px;
+    margin-bottom: 30px;
+  }
 }

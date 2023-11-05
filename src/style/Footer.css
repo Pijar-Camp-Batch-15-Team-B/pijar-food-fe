@@ -1,69 +1,69 @@
 footer {
-    background: #efc81a;
-  }
+  background: #efc81a;
+}
 
+.footerTitle {
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+footer div h1 {
+  color: #2e266f;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px; /* 66.667% */
+  text-transform: capitalize;
+}
+
+.motto-footer {
+  color: #707070;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 100% */
+  text-transform: capitalize;
+}
+
+.footer-link a {
+  text-decoration: none;
+  color: #707070;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.copyright {
+  color: #000;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
   .footerTitle {
-    margin-bottom: 50px;
-    margin-top: 50px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 0;
   }
-  
-  footer div h1 {
-    color: #2e266f;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 62px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 48px; /* 66.667% */
-    text-transform: capitalize;
-  }
-  
-  .motto-footer {
-    color: #707070;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 100% */
-    text-transform: capitalize;
-  }
-  
-  .footer-link a {
-    text-decoration: none;
-    color: #707070;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  
-  .copyright {
-    color: #000;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
+
+  .footerDesk {
     font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    text-transform: capitalize;
   }
-  
-  @media (min-width: 320px) and (max-width: 767px){
-   .footerTitle {
-      font-size: 40px;
-      margin-bottom: 10px;
-      margin-top: 0;
-    }
 
-    .footerDesk {
-      font-size: 14px;
-    }
-
-    .footer-link a {
-      font-size: 13px;
-      margin-top: -20px;
-    }
+  .footer-link a {
+    font-size: 13px;
+    margin-top: -20px;
   }
+}

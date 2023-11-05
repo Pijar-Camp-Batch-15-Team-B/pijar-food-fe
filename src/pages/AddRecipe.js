@@ -18,15 +18,12 @@ export default function AddRecipe() {
     setIsLoading(true);
 
     axios
-      .post(
-        "https://98c4-103-144-170-9.ngrok-free.app/recipe",
-        {
-          title: title,
-          ingridients: ingridients,
-          image: image,
-          video_url: video_url,
-        }
-      )
+      .post("https://recipe-web-be-b.onrender.com/recipe", {
+        title: title,
+        ingridients: ingridients,
+        image: image,
+        video_url: video_url,
+      })
       .then((respon) => {
         alert("Data berhasil ditambahkan");
       })

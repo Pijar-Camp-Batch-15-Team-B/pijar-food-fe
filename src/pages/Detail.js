@@ -24,7 +24,7 @@ function Detail() {
     try {
       // Recipe Detail
       const requestDetail = await axios.get(
-        `https://98c4-103-144-170-9.ngrok-free.app/recipe/${id}`,
+        `https://recipe-web-be-b.onrender.com/recipe/${id}`,
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
@@ -39,7 +39,7 @@ function Detail() {
 
       //get comment
       const getComment = await axios.get(
-        `https://98c4-103-144-170-9.ngrok-free.app/recipe/comment/${id}`,
+        `https://recipe-web-be-b.onrender.com/recipe/comment/${id}`,
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
@@ -69,7 +69,7 @@ function Detail() {
     if (localStorage.getItem("token") && localStorage.getItem("profile")) {
       setIsLoading(true);
       axios
-        .post(`https://98c4-103-144-170-9.ngrok-free.app/comment`, {
+        .post(`https://recipe-web-be-b.onrender.com/comment`, {
           recipe_id: id,
           username: nickName,
           photo_profile:

@@ -8,35 +8,35 @@ import Register from "./pages/Register";
 import AddRecipe from "./pages/AddRecipe";
 import Profile from "./pages/Profile";
 
-const router = createBrowserRouter ([
+const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>
+    element: <Home />,
   },
   {
     path: "/detail/:id",
-    element: <Detail/>
+    element: <Detail />,
   },
   {
     path: "/login",
-    element: <Login/>
+    element: <Login />,
   },
   {
     path: "/register",
-    element: <Register/>
+    element: <Register />,
   },
   {
     path: "/add-recipe",
-    element: <AddRecipe/>
+    element: <AddRecipe />,
   },
   {
     path: "/profile",
-    element: <Profile/>
-  }
-])
+    element: <Profile />,
+  },
+]);
 
 function App() {
-  return <RouterProvider router={router}/>
+  return <RouterProvider router={router} />;
 }
 
 export default App;
