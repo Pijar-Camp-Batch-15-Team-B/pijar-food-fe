@@ -45,6 +45,8 @@ function Home() {
       console.log(error);
     }
   };
+
+  console.log(popularRec)
   
   React.useEffect(() => {
     handleGetResponse();
