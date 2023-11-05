@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Comment from "../components/Comment";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../style/Detail.css";
 
@@ -14,9 +14,7 @@ function Detail() {
   const [comment, setComment] = useState({});
   const [ingreds, setIngreds] = useState([]);
 
-  // const [username, setUsername] = useState("");
-  // const [recipe_id, setRecipe_id] = useState("");
-  // const [photo_profile, setPhoto_profile] = useState("");
+  const [nickName, setNickName] = useState(null);
   const [message, setMessage] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -57,38 +55,47 @@ function Detail() {
     }
   };
 
+  //get profile comment from local host
+  const getProfile = () => {
+  if (localStorage.getItem("token") && localStorage.getItem("profile")) {
+      const data = JSON.parse(localStorage.getItem("profile"));
+      
+      setNickName(data[0].username);
+    };
+  }
+
+
+ 
   // post comment
   const pushComment = async () => {
-    setIsLoading(true);
-    axios
-      .post(
-        `https://98c4-103-144-170-9.ngrok-free.app/comment`,
-        {
+    if (localStorage.getItem("token") && localStorage.getItem("profile")) {
+      setIsLoading(true);
+      axios
+        .post(`https://98c4-103-144-170-9.ngrok-free.app/comment`, {
           recipe_id: id,
-          username: "Aji",
-          photo_profile: "https://i.pinimg.com/564x/9f/a5/98/9fa598830ffc1e8ae304064fcb781e31.jpg",
+          username: nickName,
+          photo_profile:
+            "https://i.pinimg.com/564x/9f/a5/98/9fa598830ffc1e8ae304064fcb781e31.jpg",
           message: message,
-        }
-      )
-      .then((respon) => {
-        // console.log("berhasil");
-      })
-      .catch((error) => {
-        // console.log(error);
-      })
-      .finally(() => {
-        setTimeout(() => {
-          window.location.reload()
-        }, 2000);
-        setIsLoading(false);
-      });
+        })
+        .then((respon) => {})
+        .catch((error) => {
+          // console.log(error);
+        })
+        .finally(() => {
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000);
+          setIsLoading(false);
+        });
+    } else {
+      alert("please login, before send comment");
+    }
   };
-
 
   React.useEffect(() => {
     handleGetApi();
-
-   
+    getProfile();
   }, []);
 
   return (
