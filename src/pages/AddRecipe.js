@@ -28,11 +28,7 @@ export default function AddRecipe() {
         }
       )
       .then((respon) => {
-        console.log("data berhasil ditambahkan");
-        console.log(image);
-        console.log(video_url);
-        console.log(title);
-        console.log(ingridients);
+        alert("Data berhasil ditambahkan");
       })
       .catch((error) => {
         console.log(error);

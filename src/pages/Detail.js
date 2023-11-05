@@ -11,7 +11,7 @@ import "../style/Detail.css";
 function Detail() {
   const { id } = useParams();
   const [detailRecipe, setDetailRecipe] = useState(null);
-  const [comment, setComment] = useState({});
+  const [comment, setComment] = useState([]);
   const [ingreds, setIngreds] = useState([]);
 
   const [nickName, setNickName] = useState(null);
@@ -48,7 +48,7 @@ function Detail() {
       );
 
       if (getComment.data.data.length > 0) {
-        setComment(getComment.data.data[0]);
+        setComment(getComment.data.data);
       }
     } catch (error) {
       console.log(`error: ${error}`);
@@ -57,15 +57,13 @@ function Detail() {
 
   //get profile comment from local host
   const getProfile = () => {
-  if (localStorage.getItem("token") && localStorage.getItem("profile")) {
+    if (localStorage.getItem("token") && localStorage.getItem("profile")) {
       const data = JSON.parse(localStorage.getItem("profile"));
-      
+
       setNickName(data[0].username);
-    };
-  }
+    }
+  };
 
-
- 
   // post comment
   const pushComment = async () => {
     if (localStorage.getItem("token") && localStorage.getItem("profile")) {
@@ -92,6 +90,9 @@ function Detail() {
       alert("please login, before send comment");
     }
   };
+  comment.map((item) => {
+    console.log(item);
+  });
 
   React.useEffect(() => {
     handleGetApi();
@@ -153,11 +154,17 @@ function Detail() {
         </div>
         <div id="commentDisplay" className="container mt-5 mb-5">
           <h4>Comment</h4>
-          <Comment
-            message={comment.message}
-            username={comment.username}
-            photo_profile={comment.photo_profile}
-          />
+          {comment.length === 0
+            ? "Not any Comment"
+            : comment.slice(0, 3).map((item) => {
+                return (
+                  <Comment
+                    message={item.message}
+                    username={item.username}
+                    photo_profile={item.photo_profile}
+                  />
+                );
+              })}
         </div>
         <Footer />
       </div>
