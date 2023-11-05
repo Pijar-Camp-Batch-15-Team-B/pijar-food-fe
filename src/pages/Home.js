@@ -15,7 +15,7 @@ function Home() {
     try {
        // Popular Recipe
        const popularRecipe = await axios.get(
-        "https://eb14-2001-448a-3032-143f-689b-53c3-8d16-e14b.ngrok-free.app/latestRecipe",
+        "https://98c4-103-144-170-9.ngrok-free.app/latestRecipe",
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
@@ -30,7 +30,7 @@ function Home() {
   
       // New Recipe
       const newRecipe = await axios.get (
-        "https://eb14-2001-448a-3032-143f-689b-53c3-8d16-e14b.ngrok-free.app/newRecipe",
+        "https://98c4-103-144-170-9.ngrok-free.app/newRecipe",
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
