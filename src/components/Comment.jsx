@@ -10,8 +10,8 @@ function Comment(props) {
             <img src={photo_profile} alt="profile"></img>
           </div>
           <div className="deskComment">
-            <h6 className="commentName">{username}</h6>
-            <p className="textComment">{message}</p>
+            <h6 className="commentName">{username === undefined ? "" : username}</h6>
+            <p className="textComment">{message === undefined ? '' : message}</p>
           </div>
         </div>
     </div>
