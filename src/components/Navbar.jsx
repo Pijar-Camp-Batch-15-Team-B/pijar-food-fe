@@ -39,12 +39,12 @@ function Navbar() {
                                         </Link>
                                     </li>
                                     <li className="nav-item nav-text">
-                                        <Link className="nav-link" to="/">
+                                        <Link className="nav-link" to="/add-recipe">
                                             <p>Add Recipe</p>
                                         </Link>
                                     </li>
                                     <li className="nav-item nav-text">
-                                        <Link className="nav-link" to="/">
+                                        <Link className="nav-link" to="/profile">
                                             <p>Profile</p>
                                         </Link>
                                     </li>
