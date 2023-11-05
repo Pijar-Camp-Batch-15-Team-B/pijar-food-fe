@@ -196,6 +196,8 @@ hr {
 
 .menu-child img{
     width: 500px;
+    height: 400px;
+    object-fit: cover;
 }
 
 /* Mobile */
@@ -267,7 +269,7 @@ hr {
     /* Poplar Recipe */
     
     .menu-child img {
-        width: 100%;
+        width: 400px;
     }
 }
 

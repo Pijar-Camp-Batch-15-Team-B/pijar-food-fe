@@ -112,9 +112,11 @@ function Home() {
             <p>
             Would you like to learn how to make it? <br/> You can access a more detailed version of this recipe, <br/> which includes step-by-step instructions.
             </p>
+            <Link to={`/detail/${item.id}`}>
             <button type="button" className="btn btn-warning text-white">
               Learn More
             </button>
+            </Link>
           </div>
         </div>
         ))}
