@@ -11,15 +11,20 @@ Pijar food is a website which contains many food recipes from various regions & 
 - Easy to access via any device because our website is responsive
 - Many more features, coming soon!
 
-# Tech Stack
+## Tech Stack
 
 We use several frameworks and libraries to create our front end, namely:
-[React JS](https://react.dev/ "React JS") - Front-End library
-[Bootstrap](https://getbootstrap.com/ "Bootstrap") - CSS framework
 
-## Available Scripts
+- [React JS](https://react.dev/ "React JS") - Front-End library
+- [Bootstrap](https://getbootstrap.com/ "Bootstrap") - CSS framework
 
-In the project directory, you can run:
+## Installation
+
+Because pijar food is an open source project, you can also run pijar food on your localhost. clone this repository and open it using your favorite code editor, and run the terminal like this:
+
+`Git clone https://github.com/alkarim99/food-recipe-web.git`
+`npm i`
+`npm start`
 
 ### `npm start`
 
