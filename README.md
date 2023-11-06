@@ -23,7 +23,7 @@ We use several frameworks and libraries to create our front end, namely:
 Because pijar food is an open source project, you can also run pijar food on your localhost. clone this repository and open it using your favorite code editor, and run the terminal like this:
 
 ```
-Git clone https://github.com/alkarim99/food-recipe-web.git
+Git clone https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe.git
 npm i
 npm start
 ```
