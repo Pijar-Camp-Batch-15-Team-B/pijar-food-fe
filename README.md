@@ -55,3 +55,22 @@ Back-End Developer
 - Back-End Repository [Github Repository](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-be "Pijar Food Back-End Repository")
 
 ## Screenshot
+
+Homepage
+![Homepage](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe/blob/main/public/Screenshot/Homepage%201.png)
+![Homepage](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe/blob/main/public/Screenshot/Homepage%202.png)
+![Homepage](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe/blob/main/public/Screenshot/Homepage%203.png)
+![Homepage](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe/blob/main/public/Screenshot/Homepage%204.png)
+
+Detail Recipe
+![Detail Recipe](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe/blob/main/public/Screenshot/Detail%20Recipe%201.png)
+![Detail Recipe](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe/blob/main/public/Screenshot/Detail%20Recipe%202.png)
+
+Add Recipe
+![Add Recipe](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe/blob/main/public/Screenshot/Add%20Recipe.png)
+
+Login
+![Login](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe/blob/main/public/Screenshot/Login.png)
+
+Register
+![Register](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-fe/blob/main/public/Screenshot/Register.png)
