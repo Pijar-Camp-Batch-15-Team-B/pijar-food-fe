@@ -268,7 +268,7 @@ hr {
 
   /* Popular Recipe */
   .menu-box {
-    padding: 20px;
+    padding: 60px;
   }
 }
 
@@ -276,6 +276,6 @@ hr {
   /* Poplar Recipe */
 
   .menu-child img {
-    width: 400px;
+    width: 350px;
   }
 }
