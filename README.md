@@ -30,22 +30,28 @@ npm start
 
 ## Team & Contibutor
 
-1. Technical Trainer
+Technical Trainer
 
 - Bilkis Ismail - [Github Profile](https://github.com/kubil-ismail "Bilkis Ismail")
 
-2. Team Leader
+Team Leader
 
 - Yongki Satria Sanjaya - [Github Profile](https://github.com/yongkisatrias "Yongki Satria Sanjaya")
 
-3. Front-End Developer
+Front-End Developer
 
 - Ainul Yaqin - [Github Profile](https://github.com/yaaqin "Ainul Yaqin")
 - Aulia Ramadhan - [Github Profile](https://github.com/sayarama "Aulia Ramadhan")
 
-4. Back-End Developer
+Back-End Developer
 
 - Rayhan Ilham Sukmawan - [Github Profile](https://github.com/Rayaja897 "Rayhan Ilham Sukmawan")
 - Yongki Satria Sanjaya - [Github Profile](https://github.com/yongkisatrias "Yongki Satria Sanjaya")
+
+## Link
+
+- Front-End Deployment [Pijar Food](https://pijar-food-team-b.vercel.app/ "Pijar Food")
+
+- Back-End Repository [Github Repository](https://github.com/Pijar-Camp-Batch-15-Team-B/pijar-food-be "Pijar Food Back-End Repository")
 
 ## Screenshot
