@@ -4,18 +4,18 @@ Pijar food is a website which contains many food recipes from various regions & 
 
 ## Feature
 
-<ul>
-    <ol>Search for food recipes by food name</ol>
-    <ol>Provides video-based cooking tutorials that will be directly connected to YouTube</ol>
-    <ol>Share homemade recipes via the "add recipe" feature</ol>
-    <ol>Inviting user to share cooking experiences through the comments column on each food recipe</ol>
-    <ol>Easy to access via any device because our website is responsive</ol>
-    <ol>Many more features, coming soon!</ol>
-</ul>
+- Search for food recipes by food name
+- Provides video-based cooking tutorials that will be directly connected to YouTube
+- Share homemade recipes via the "add recipe" feature
+- Inviting user to share cooking experiences through the commentsmn on each food recipe
+- Easy to access via any device because our website is responsive
+- Many more features, coming soon!
 
-# Getting Started with Create React App
+# Tech Stack
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We use several frameworks and libraries to create our front end, namely:
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) - Fron-Eend library
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) - CSS framework
 
 ## Available Scripts
 
