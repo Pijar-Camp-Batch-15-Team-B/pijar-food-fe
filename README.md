@@ -1,3 +1,18 @@
+# Pijar Food
+
+Pijar food is a website which contains many food recipes from various regions & countries and aims to make it easier for people who want to cook so they don't get confused when looking for recipes, users can even add recipes they have made themselves.
+
+## Feature
+
+<ul>
+    <ol>Search for food recipes by food name</ol>
+    <ol>Provides video-based cooking tutorials that will be directly connected to YouTube</ol>
+    <ol>Share homemade recipes via the "add recipe" feature</ol>
+    <ol>Inviting user to share cooking experiences through the comments column on each food recipe</ol>
+    <ol>Easy to access via any device because our website is responsive</ol>
+    <ol>Many more features, coming soon!</ol>
+</ul>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,5 +83,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
