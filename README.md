@@ -14,8 +14,8 @@ Pijar food is a website which contains many food recipes from various regions & 
 # Tech Stack
 
 We use several frameworks and libraries to create our front end, namely:
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) - Fron-Eend library
-![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) - CSS framework
+[React JS](https://react.dev/ "React JS") - Front-End library
+[Bootstrap](https://getbootstrap.com/ "Bootstrap") - CSS framework
 
 ## Available Scripts
 
