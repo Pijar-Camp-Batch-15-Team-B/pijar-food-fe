@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Comment from "../components/Comment";
 import { Link, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 import "../style/Detail.css";
 
@@ -87,7 +88,12 @@ function Detail() {
           setIsLoading(false);
         });
     } else {
-      alert("please login, before send comment");
+      window.swal({
+        title: "Access Denied",
+        text: "You must login first before comment!",
+        icon: "warning",
+        button: "Ok",
+      });
     }
   };
   comment.map((item) => {
