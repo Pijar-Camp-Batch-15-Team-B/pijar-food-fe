@@ -41,6 +41,10 @@ function Navbar() {
     } else {
     }
   };
+
+  React.useEffect(() => {
+getData()
+  }, [])
   return (
     <>
       <div className="header-container">
