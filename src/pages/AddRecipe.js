@@ -18,7 +18,7 @@ export default function AddRecipe() {
     setIsLoading(true);
 
     axios
-      .post("https://recipe-web-be-b.onrender.com/recipe", {
+      .post("https://pijar-food-be.cyclic.app/recipe", {
         title: title,
         ingridients: ingridients,
         image: image,
