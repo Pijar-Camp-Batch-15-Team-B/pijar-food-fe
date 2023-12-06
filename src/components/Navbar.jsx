@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/Navbar.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Navbar() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [userProfile, setuserProfile] = useState({});
+  const jwtToken = localStorage.getItem("token");
+
   const [profile, setProfile] = React.useState(
     JSON.parse(localStorage.getItem("profile"))
   );
@@ -10,6 +15,31 @@ function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem("profile");
     window.location.reload();
+  };
+
+  const getData = () => {
+
+
+    if (localStorage.getItem("token") && localStorage.getItem("profile")) {
+      setIsLoading(true);
+      axios
+        .get("https://pijar-food-be.cyclic.app/users/me", {
+          headers: {
+            Authorization: `Bearer ${jwtToken}`,
+          },
+        })
+        .then((respon) => {
+          const result = respon.data.data[0];
+          setuserProfile(result);
+        })
+        .catch((error) => {
+          console.log(`Get data gagal, error : ${error}`);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } else {
+    }
   };
   return (
     <>
@@ -59,7 +89,7 @@ function Navbar() {
                       Logout
                     </button>
                     <img
-                      src={profile?.photo_profile}
+                      src={userProfile.photo_profile}
                       width="50px"
                       height="50px"
                       alt="profile"

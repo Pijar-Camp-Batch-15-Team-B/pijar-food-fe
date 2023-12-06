@@ -22,7 +22,7 @@ export default function Login() {
     setErrMsg(null);
 
     axios
-      .post("https://recipe-web-be-b.onrender.com/users/login", {
+      .post("https://pijar-food-be.cyclic.app/users/login", {
         email: email,
         password: password,
       })

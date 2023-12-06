@@ -25,7 +25,7 @@ function Detail() {
     try {
       // Recipe Detail
       const requestDetail = await axios.get(
-        `https://recipe-web-be-b.onrender.com/recipe/${id}`,
+        `https://pijar-food-be.cyclic.app/recipe/${id}`,
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
@@ -40,7 +40,7 @@ function Detail() {
 
       //get comment
       const getComment = await axios.get(
-        `https://recipe-web-be-b.onrender.com/recipe/comment/${id}`,
+        `https://pijar-food-be.cyclic.app/recipe/comment/${id}`,
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
@@ -70,7 +70,7 @@ function Detail() {
     if (localStorage.getItem("token") && localStorage.getItem("profile")) {
       setIsLoading(true);
       axios
-        .post(`https://recipe-web-be-b.onrender.com/comment`, {
+        .post(`https://pijar-food-be.cyclic.app/comment`, {
           recipe_id: id,
           username: nickName,
           photo_profile:

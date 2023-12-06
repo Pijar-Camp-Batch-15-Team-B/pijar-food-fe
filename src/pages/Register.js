@@ -24,7 +24,7 @@ function Register() {
     setErrMsg(null);
 
     axios
-      .post("https://recipe-web-be-b.onrender.com/users/register", {
+      .post("https://pijar-food-be.cyclic.app/users/register", {
         username: username,
         email: email,
         phone_number: phoneNumber,

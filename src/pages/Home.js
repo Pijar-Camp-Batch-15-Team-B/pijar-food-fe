@@ -15,7 +15,7 @@ function Home() {
     try {
       // Popular Recipe
       const popularRecipe = await axios.get(
-        "https://recipe-web-be-b.onrender.com/latestRecipe",
+        "https://pijar-food-be.cyclic.app/latestRecipe",
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
@@ -30,7 +30,7 @@ function Home() {
 
       // New Recipe
       const newRecipe = await axios.get(
-        "https://recipe-web-be-b.onrender.com/newRecipe",
+        "https://pijar-food-be.cyclic.app/newRecipe",
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
