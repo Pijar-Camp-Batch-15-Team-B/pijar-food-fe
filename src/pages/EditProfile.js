@@ -10,6 +10,10 @@ export default function EditProfile() {
   const navigate = useNavigate();
   const [newUsername, setNewUsername] = useState();
   const [newProfile, setNewProfile] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
+  const [email, setEmail] = useState();
+  const [userProfile, setuserProfile] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   const jwtToken = localStorage.getItem("token");
 
@@ -39,12 +43,72 @@ export default function EditProfile() {
     }
   };
 
+  const getData = async () => {
+    if (localStorage.getItem("token") && localStorage.getItem("profile")) {
+      setIsLoading(true);
+      axios
+        .get("https://pijar-food-be.cyclic.app/users/me", {
+          headers: {
+            Authorization: `Bearer ${jwtToken}`,
+          },
+        })
+        .then((respon) => {
+          const result = respon.data.data[0];
+          setuserProfile(result);
+        })
+        .catch((error) => {
+          console.log(`Get data gagal, error : ${error}`);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } else {
+    }
+  };
+
+  console.log(userProfile)
+  React.useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <section id="editProfile">
       <Navbar />
       <div className="Body">
         <div className="formEdit">
-          <div className="flexContent">
+          <p>Update Your Profile</p>
+          <div className="editFotoParent">
+            <img className="iconEdit" src="/images/icon-edit.png"></img>
+            <div>
+              <img className="editFoto" src={userProfile.photo_profile}></img>
+            </div>
+          </div>
+          <label>Fullname</label>
+          <input
+            placeholder="Fullname"
+            onChange={(value) => {
+              setNewUsername(value.target.value);
+            }}
+          ></input>
+          <hr></hr>
+          <label>Email</label>
+          <input
+            placeholder="Email"
+            onChange={(value) => {
+              setEmail(value.target.value);
+            }}
+          ></input>
+          <label>Phone Number</label>
+          <input
+            placeholder="Phone Number"
+            onChange={(value) => {
+              setPhoneNumber(value.target.value);
+            }}
+          ></input>
+          <div>
+            <button onClick={() => handleUpdate()}>Save</button>
+          </div>
+          {/* <div className="flexContent">
             <input
               onChange={(value) => {
                 setNewProfile(value.target.value);
@@ -60,7 +124,7 @@ export default function EditProfile() {
             ></input>
             <p>Nama baru</p>
           </div>
-          <button onClick={() => handleUpdate()}>Edit</button>
+          <button onClick={() => handleUpdate()}>Edit</button> */}
         </div>
       </div>
       <Footer />
