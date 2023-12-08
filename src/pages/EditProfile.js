@@ -16,6 +16,7 @@ export default function EditProfile() {
   const [isLoading, setIsLoading] = useState(false);
 
   const jwtToken = localStorage.getItem("token");
+  const [linkProfile, setLinkProfile] = useState()
 
   const handleUpdate = async () => {
     try {
@@ -24,7 +25,9 @@ export default function EditProfile() {
 
         {
           username: newUsername,
-          photo_profile: newProfile,
+          photo_profile: linkProfile,
+          phone_number: phoneNumber,
+          email: email,
         },
         {
           headers: {
@@ -78,11 +81,14 @@ export default function EditProfile() {
         <div className="formEdit">
           <p>Update Your Profile</p>
           <div className="editFotoParent">
-            <img className="iconEdit" src="/images/icon-edit.png"></img>
-            <div>
-              <img className="editFoto" src={userProfile.photo_profile}></img>
-            </div>
           </div>
+          <label>Photo Profile</label>
+          <input
+            placeholder="Input Your Image"
+            onChange={(value) => {
+              setLinkProfile(value.target.value);
+            }}
+          ></input>
           <label>Fullname</label>
           <input
             placeholder="Fullname"
