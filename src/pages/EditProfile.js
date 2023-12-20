@@ -19,17 +19,30 @@ export default function EditProfile() {
 
   const handleUpdatePhotoProfile = async () => {
     try {
-      axios.post(
-        "https://pijar-food-be-fawn.vercel.app/user/edit/photo",
-        {
-          photo_profile: newPhotoProfile,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${jwtToken}`,
-          },
-        }
-      );
+      // const form = new FormData()
+      // form.append('photo_profile', newPhotoProfile)
+
+      // axios
+      // .post(`https://pijar-food-be-fawn.vercel.app/user/edit/photo`, newPhotoProfile, {
+      //   headers: {
+      //     Authorization: `Bearer ${jwtToken}`,
+      //     'Content-Type': 'multipart/form-data'
+      //   }
+      // })
+
+console.log(newPhotoProfile)
+
+      // axios.post(
+      //   "https://pijar-food-be-fawn.vercel.app/user/edit/photo",
+      //   {
+      //     photo_profile: newPhotoProfile,
+      //   },
+      //   {
+      //     headers: {
+      //       Authorization: `Bearer ${jwtToken}`,
+      //     },
+      //   }
+      // );
     } catch (error) {
       console.log(error);
     }
@@ -103,7 +116,8 @@ export default function EditProfile() {
               type="file"
               placeholder="Input Your Image"
               onChange={(value) => {
-                setnewPhotoProfile(value.target.value);
+
+                setnewPhotoProfile(value.target.files[0]);
               }}
             ></input>
             <button onClick={handleUpdatePhotoProfile()}>Save</button>
@@ -133,23 +147,7 @@ export default function EditProfile() {
           <div>
             <button onClick={() => handleUpdate()}>Save</button>
           </div>
-          {/* <div className="flexContent">
-            <input
-              onChange={(value) => {
-                setNewProfile(value.target.value);
-              }}
-            ></input>
-            <p>Link Profile baru</p>
-          </div>
-          <div className="flexContent">
-            <input
-              onChange={(value) => {
-                setNewUsername(value.target.value);
-              }}
-            ></input>
-            <p>Nama baru</p>
-          </div>
-          <button onClick={() => handleUpdate()}>Edit</button> */}
+          
         </div>
       </div>
       <Footer />
