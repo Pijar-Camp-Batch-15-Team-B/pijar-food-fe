@@ -18,7 +18,7 @@ export default function AddRecipe() {
     setIsLoading(true);
 
     axios
-      .post("https://pijar-food-be.cyclic.app/recipe", {
+      .post("https://pijar-food-be-fawn.vercel.app/recipe", {
         title: title,
         ingridients: ingridients,
         image: image,

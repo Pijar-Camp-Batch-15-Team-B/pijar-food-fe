@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import "../style/Navbar.css";
 import { Link } from "react-router-dom";
@@ -18,12 +19,10 @@ function Navbar() {
   };
 
   const getData = () => {
-
-
     if (localStorage.getItem("token") && localStorage.getItem("profile")) {
       setIsLoading(true);
       axios
-        .get("https://pijar-food-be.cyclic.app/users/me", {
+        .get("https://pijar-food-be-fawn.vercel.app/users/me", {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },
@@ -43,8 +42,9 @@ function Navbar() {
   };
 
   React.useEffect(() => {
-getData()
-  }, [])
+    getData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <>
       <div className="header-container">
