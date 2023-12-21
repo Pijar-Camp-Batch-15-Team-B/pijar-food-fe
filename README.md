@@ -48,7 +48,7 @@ Back-End Developer
 - Rayhan Ilham Sukmawan - [Github Profile](https://github.com/Rayaja897 "Rayhan Ilham Sukmawan")
 - Yongki Satria Sanjaya - [Github Profile](https://github.com/yongkisatrias "Yongki Satria Sanjaya")
 
-## Link
+## Related Project
 
 - Front-End Deployment [Pijar Food](https://pijar-food-team-b.vercel.app/ "Pijar Food")
 
