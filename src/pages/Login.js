@@ -22,7 +22,7 @@ export default function Login() {
     setErrMsg(null);
 
     axios
-      .post("https://pijar-food-be.cyclic.app/users/login", {
+      .post("https://pijar-food-be-fawn.vercel.app/users/login", {
         email: email,
         password: password,
       })

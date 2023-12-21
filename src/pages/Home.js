@@ -15,7 +15,7 @@ function Home() {
     try {
       // Popular Recipe
       const popularRecipe = await axios.get(
-        "https://pijar-food-be.cyclic.app/latestRecipe",
+        "https://pijar-food-be-fawn.vercel.app/latestRecipe",
         {
           headers: {
             "ngrok-skip-browser-warning": "true",
@@ -30,7 +30,7 @@ function Home() {
 
       // New Recipe
       const newRecipe = await axios.get(
-        "https://pijar-food-be.cyclic.app/newRecipe",
+        "https://pijar-food-be-fawn.vercel.app/newRecipe",
         {
           headers: {
             "ngrok-skip-browser-warning": "true",

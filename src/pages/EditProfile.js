@@ -2,30 +2,59 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "../style/EditProfile.css";
 
 export default function EditProfile() {
   const navigate = useNavigate();
   const [newUsername, setNewUsername] = useState();
-  const [newProfile, setNewProfile] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
   const [email, setEmail] = useState();
   const [userProfile, setuserProfile] = useState();
   const [isLoading, setIsLoading] = useState(false);
+  const [newPhotoProfile, setnewPhotoProfile] = useState(false);
 
   const jwtToken = localStorage.getItem("token");
-  const [linkProfile, setLinkProfile] = useState()
+
+  const handleUpdatePhotoProfile = async () => {
+    try {
+      // const form = new FormData()
+      // form.append('photo_profile', newPhotoProfile)
+
+      // axios
+      // .post(`https://pijar-food-be-fawn.vercel.app/user/edit/photo`, newPhotoProfile, {
+      //   headers: {
+      //     Authorization: `Bearer ${jwtToken}`,
+      //     'Content-Type': 'multipart/form-data'
+      //   }
+      // })
+
+console.log(newPhotoProfile)
+
+      // axios.post(
+      //   "https://pijar-food-be-fawn.vercel.app/user/edit/photo",
+      //   {
+      //     photo_profile: newPhotoProfile,
+      //   },
+      //   {
+      //     headers: {
+      //       Authorization: `Bearer ${jwtToken}`,
+      //     },
+      //   }
+      // );
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleUpdate = async () => {
     try {
       const result = await axios.put(
-        "https://pijar-food-be.cyclic.app/users/edit",
+        "https://pijar-food-be-fawn.vercel.app/users/edit",
 
         {
           username: newUsername,
-          photo_profile: linkProfile,
           phone_number: phoneNumber,
           email: email,
         },
@@ -50,7 +79,7 @@ export default function EditProfile() {
     if (localStorage.getItem("token") && localStorage.getItem("profile")) {
       setIsLoading(true);
       axios
-        .get("https://pijar-food-be.cyclic.app/users/me", {
+        .get("https://pijar-food-be-fawn.vercel.app/users/me", {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },
@@ -69,9 +98,10 @@ export default function EditProfile() {
     }
   };
 
-  console.log(userProfile)
+  console.log(userProfile);
   React.useEffect(() => {
-    getData();
+    // getData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -81,14 +111,18 @@ export default function EditProfile() {
         <div className="formEdit">
           <p>Update Your Profile</p>
           <div className="editFotoParent">
+            <label>Photo Profile</label>
+            <input
+              type="file"
+              placeholder="Input Your Image"
+              onChange={(value) => {
+
+                setnewPhotoProfile(value.target.files[0]);
+              }}
+            ></input>
+            <button onClick={handleUpdatePhotoProfile()}>Save</button>
           </div>
-          <label>Photo Profile</label>
-          <input
-            placeholder="Input Your Image"
-            onChange={(value) => {
-              setLinkProfile(value.target.value);
-            }}
-          ></input>
+          <hr></hr>
           <label>Fullname</label>
           <input
             placeholder="Fullname"
@@ -96,7 +130,6 @@ export default function EditProfile() {
               setNewUsername(value.target.value);
             }}
           ></input>
-          <hr></hr>
           <label>Email</label>
           <input
             placeholder="Email"
@@ -114,23 +147,7 @@ export default function EditProfile() {
           <div>
             <button onClick={() => handleUpdate()}>Save</button>
           </div>
-          {/* <div className="flexContent">
-            <input
-              onChange={(value) => {
-                setNewProfile(value.target.value);
-              }}
-            ></input>
-            <p>Link Profile baru</p>
-          </div>
-          <div className="flexContent">
-            <input
-              onChange={(value) => {
-                setNewUsername(value.target.value);
-              }}
-            ></input>
-            <p>Nama baru</p>
-          </div>
-          <button onClick={() => handleUpdate()}>Edit</button> */}
+          
         </div>
       </div>
       <Footer />

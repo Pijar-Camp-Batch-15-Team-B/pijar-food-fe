@@ -15,7 +15,7 @@ export default function Profile() {
     if (localStorage.getItem("token") && localStorage.getItem("profile")) {
       setIsLoading(true);
       axios
-        .get("https://pijar-food-be.cyclic.app/users/me", {
+        .get("https://pijar-food-be-fawn.vercel.app/users/me", {
           headers: {
             Authorization: `Bearer ${jwtToken}`,
           },

@@ -19,6 +19,10 @@
     width: 200px;
 }
 
+.editFotoParent label {
+  margin-bottom: 10px;
+}
+
 .editFoto {
 width: 200px;
 height: 200px;

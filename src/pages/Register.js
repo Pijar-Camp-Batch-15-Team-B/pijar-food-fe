@@ -24,7 +24,7 @@ function Register() {
     setErrMsg(null);
 
     axios
-      .post("https://pijar-food-be.cyclic.app/users/register", {
+      .post("http://localhost:3000/users/register", {
         username: username,
         email: email,
         phone_number: phoneNumber,
